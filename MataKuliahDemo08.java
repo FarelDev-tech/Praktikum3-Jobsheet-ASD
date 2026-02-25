@@ -30,12 +30,12 @@ public class MataKuliahDemo08 {
             arrayOfMataKuliah[i] = new MataKuliah08(kode, nama, sks, jumlahJam);
         }
 
+        // Permisalan menambahkan sendiri method tambahData() untuk mengubah data mata kuliah ke-2
+        arrayOfMataKuliah[1].tambahData("123", "MATEMATIKA", 3, 2);
+
         for (int i = 0; i < arrayOfMataKuliah.length; i++) {
             System.out.println("Data mata kuliah ke-" + (i + 1));
-            System.out.println("Kode: " + arrayOfMataKuliah[i].kode);
-            System.out.println("Nama: " + arrayOfMataKuliah[i].nama);
-            System.out.println("SKS: " + arrayOfMataKuliah[i].sks);
-            System.out.println("Jumlah Jam: " + arrayOfMataKuliah[i].jumlahJam);
+            arrayOfMataKuliah[i].cetakInfo();
             System.out.println("-----------------------------");
         }
     }
