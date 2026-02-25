@@ -22,12 +22,10 @@ public class mahasiswaDemo08 {
             System.out.println("-----------------------------");
         }
 
+        // Menampilkan data mahasiswa dengan menggunakan method cetakInfo
         for (int i = 0; i < arrayOfMahasiswa.length; i++) {
             System.out.println("Data mahasiswa ke-" + (i + 1));
-            System.out.println("NIM: " + arrayOfMahasiswa[i].nim);
-            System.out.println("Nama: " + arrayOfMahasiswa[i].nama);
-            System.out.println("Kelas: " + arrayOfMahasiswa[i].kelas);
-            System.out.println("IPK: " + arrayOfMahasiswa[i].ipk);
+            arrayOfMahasiswa[i].cetakInfo();
             System.out.println("-----------------------------");
         }
     }
