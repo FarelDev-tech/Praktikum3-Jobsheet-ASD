@@ -25,21 +25,38 @@ public class DataDosen08 {
         System.out.println("-----------------------------");
     }
 
-    public void rerataUsiaDosen(Dosen08[] arrayOfDosen) {
-        int totalUsia = 0;
-        double rerataUsia;
+    public void rerataUsiaPerJenisKelaminDosen(Dosen08[] arrayOfDosen) {
+        int totalUsiaPria = 0;
+        int totalUsiaWanita = 0;
+        int jumlahPria = 0;
+        int jumlahWanita = 0;
+        double rerataUsiaPria, rerataUsiaWanita;
 
         // Menjumlahkan usia semua dosen
         for (Dosen08 dosen : arrayOfDosen) {
-            totalUsia += dosen.usia;
+            if (dosen.jenisKelamin) {
+                totalUsiaPria += dosen.usia;
+                jumlahPria++;
+            } else {
+                totalUsiaWanita += dosen.usia;
+                jumlahWanita++;
+            }
         }
 
-        // Menghitung rerata usia dosen
-        if (arrayOfDosen.length > 0) {
-            rerataUsia = (double) totalUsia / arrayOfDosen.length;
-            System.out.println("Rerata Usia Dosen: " + rerataUsia);
+        // Menghitung rerata usia dosen pria
+        if (jumlahPria > 0) {
+            rerataUsiaPria = (double) totalUsiaPria / jumlahPria;
+            System.out.println("Rerata Usia Dosen Pria: " + rerataUsiaPria);
         } else {
-            System.out.println("Tidak ada data dosen.");
+            System.out.println("Tidak ada data dosen pria.");
+        }
+
+        // Menghitung rerata usia dosen wanita
+        if (jumlahWanita > 0) {
+            rerataUsiaWanita = (double) totalUsiaWanita / jumlahWanita;
+            System.out.println("Rerata Usia Dosen Wanita: " + rerataUsiaWanita);
+        } else {
+            System.out.println("Tidak ada data dosen wanita.");
         }
         System.out.println("-----------------------------");
     }

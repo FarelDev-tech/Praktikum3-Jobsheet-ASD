@@ -43,7 +43,7 @@ public class DosenDemo08 {
         // Memanggil method-method dari class
         dataDosen.dataSemuaDosen(arrayOfDosen);
         dataDosen.jumlahDosenPerJenisKelamin(arrayOfDosen);
-        dataDosen.rerataUsiaDosen(arrayOfDosen);
+        dataDosen.rerataUsiaPerJenisKelaminDosen(arrayOfDosen);
         dataDosen.infoDosenPalingTua(arrayOfDosen);
         dataDosen.infoDosenPalingMuda(arrayOfDosen);
     }
